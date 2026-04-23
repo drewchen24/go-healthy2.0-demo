@@ -26,10 +26,6 @@
 	<link href="assets/plugin/swiper_4.3.5.min.css" rel="stylesheet">
 	<script src="assets/plugin/swiper_4.3.5.min.js"></script> -->
 
-	<!-- Bootstrap v4.3 -->
-	<script src="assets/plugin/bootstrap.min.js"></script>
-	<link href="assets/plugin/bootstrap.css" rel="stylesheet">
-	<link href="assets/plugin/bootstrap-grid-customizing.css" rel="stylesheet">
 
 	<!-- CSS Customize -->
 	<link href="assets/css/type.css" rel="stylesheet">
@@ -52,7 +48,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
 <!-- open animation -->
-<div class="open_am_box off">
+<div class="open_am_box">
 	<img class="am_people" src="assets/images/index/one_box_a_image_4.gif" fetchpriority="high" alt="">
 	<img class="am_ball" src="assets/images/index/open_am_ball.png" fetchpriority="high" alt="">
 	<img class="am_title" src="assets/images/index/open_am_title.png" fetchpriority="high" alt="">
@@ -60,7 +56,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <style>
 .open_am_box{position:fixed;top:0;right:0;bottom:0;left:0;margin:auto;width:100%;height:100%;background-color:#ecf2f5;z-index:2000;overflow:hidden;}
 .open_am_box .am_people{position:absolute;top:0;bottom:0;left:50%;margin:auto;margin-left:-400px;width:800px;height:auto;opacity:1;}
-.open_am_box .am_ball{position:absolute;top:0;right:0;bottom:0;left:0;margin:auto;width:100px;height:auto;opacity:0}
+.open_am_box .am_ball{position:absolute;top:0;right:0;bottom:0;left:0;margin:auto;width:100px;height:auto;opacity:0;}
 .open_am_box .am_title{position:absolute;top:0;bottom:0;left:50%;margin:auto;margin-left:-233px;width:466px;height:auto;opacity:1;}
 /**/
 .open_am_box .am_people{
@@ -139,6 +135,57 @@ animation:open_am_title 3s linear 0s 1 normal both;
 50%{margin-left:-233px;width:466px;opacity:1;}
 90%{margin-left:-233px;width:466px;opacity:1;}
 100%{margin-left:-1200px;width:2400px;opacity:0;}
+}
+/* RWD */
+@media (max-width:1300px){
+.open_am_box .am_people{margin-left:-150px;width:300px;}
+.open_am_box .am_ball{width:66px;}
+.open_am_box .am_title{margin-left:-78px;width:156px;}
+@-moz-keyframes open_am_ball{
+0%{opacity:0;width:76px;}
+30%{opacity:0;width:76px;}
+40%{opacity:1;width:76px;}
+50%{opacity:1;width:76px;}
+90%{opacity:1;width:76px;}
+100%{opacity:0;width:76px;}
+}
+@-webkit-keyframes open_am_ball{
+0%{opacity:0;width:76px;}
+30%{opacity:0;width:76px;}
+40%{opacity:1;width:76px;}
+50%{opacity:1;width:76px;}
+90%{opacity:1;width:76px;}
+100%{opacity:0;width:76px;}
+}
+@keyframes open_am_ball{
+0%{opacity:0;width:76px;}
+30%{opacity:0;width:76px;}
+40%{opacity:1;width:76px;}
+50%{opacity:1;width:76px;}
+90%{opacity:1;width:76px;}
+100%{opacity:0;width:76px;}
+}
+@-moz-keyframes open_am_title{
+0%{margin-left:-78px;width:156px;opacity:0;}
+40%{margin-left:-78px;width:156px;opacity:0;}
+50%{margin-left:-78px;width:156px;opacity:1;}
+90%{margin-left:-78px;width:156px;opacity:1;}
+100%{margin-left:-600px;width:1200px;opacity:0;}
+}
+@-webkit-keyframes open_am_title{
+0%{margin-left:-78px;width:156px;opacity:0;}
+40%{margin-left:-78px;width:156px;opacity:0;}
+50%{margin-left:-78px;width:156px;opacity:1;}
+90%{margin-left:-78px;width:156px;opacity:1;}
+100%{margin-left:-600px;width:1200px;opacity:0;}
+}
+@keyframes open_am_title{
+0%{margin-left:-78px;width:156px;opacity:0;}
+40%{margin-left:-78px;width:156px;opacity:0;}
+50%{margin-left:-78px;width:156px;opacity:1;}
+90%{margin-left:-78px;width:156px;opacity:1;}
+100%{margin-left:-600px;width:1200px;opacity:0;}
+}
 }
 </style>
 <script>

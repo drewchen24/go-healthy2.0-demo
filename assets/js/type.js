@@ -62,60 +62,6 @@ $(document).ready(function(){
 	wow.init();
 
 
-	/* two_box Swiper */
-	var swiper = new Swiper('.swiper_box.marquee .swiper-container', {
-
-		// 自適應佈局
-		breakpoints: {
-			700: { // <= 視窗小於 px
-				slidesPerView: 1,
-				spaceBetween: 30,
-				slidesPerGroup: 1,
-			},
-			1000: {
-				slidesPerView: 2,
-				spaceBetween: 30,
-				slidesPerGroup: 1,
-			},
-			1300: {
-				slidesPerView: 3,
-				spaceBetween: 30,
-				slidesPerGroup: 1,
-			},
-		},
-		slidesPerView: 'auto', //佈局：123行的數量 //：跑馬燈：'auto'
-		spaceBetween: 30, //佈局：格間距
-		slidesPerGroup: 1, //佈局：格群組數量
-
-		effect: "slide", //主題：幻燈片-slide, 淡入淡出-fade, 立方體-cube, 封面流-coverflow,翻轉-flip
-		direction: "horizontal", //滑塊方向：水平-horizontal, 垂直-vertical
-		mousewheel: false, //滑鼠滾輪切換
-		centeredSlides: true, //佈局：置中
-		grabCursor: true, //佈局：手形鼠標
-		loop: true, //滑塊循環：
-		loopFillGroupWithBlank: true, //滑塊不足時補足空白滑塊
-
-		speed: 3000, //滑塊速度
-		autoplay: {
-			delay: 0, //自動播放速度
-			disableOnInteraction: false //滑動後繼續播放 預設-true, 啟動-false
-		},
-		autoplay: true, //自動播放
-
-		/* 延遲加載 */
-		lazy: {
-			loadPrevNext: true, //加載前後幻燈片
-		},
-		lazy: true,
-
-		/* 導航前後 */
-		navigation: {
-			nextEl: '.swiper_box.marquee .swiper-button-next',
-			prevEl: '.swiper_box.marquee .swiper-button-prev',
-		},
-
-	});
-
 
 	/* six_box slide_list_box */
 	$(".six_box .slide_title_box .icon.add").click(function(){

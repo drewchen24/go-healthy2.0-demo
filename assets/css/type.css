@@ -466,7 +466,7 @@ width:calc(100% - (20px) * 2);
 	height:calc(100% - (100px) );
 }
 .one_box .big_bg_box{position:absolute;bottom:0;left:50%;margin-left:-960px;width:1920px;height:100%;}
-.one_box .big_bg_box img{width:auto;height:1080px;}
+.one_box .big_bg_box img{width:100%;height:100%;}
 .one_box .bg_box{position:absolute;top:56px;right:0;left:0;margin:auto;height:620px;text-align:center;}
 .one_box .am_box{position:relative;height:100%;margin:0;text-align:center;overflow:hidden;}
 .one_box .am_box{-webkit-border-radius:48px;-moz-border-radius:48px;border-radius:48px;}
@@ -667,6 +667,7 @@ height:-webkit-calc(100% - (78px) );
 height:-ms-calc(100% - (78px) );
 height:calc(100% - (78px) );
 }
+.one_box .big_bg_box{display:none;}
 .one_box .am_box .am_text{width:440px;height:172px;}
 .one_box .am_box .am_text .am_text_tag01,
 .one_box .am_box .am_text .am_text_tag02{width:140px;}
@@ -693,7 +694,7 @@ height:calc(100% - (78px) );
 .one_box .am_box .am_image_1_2{width:140px;}
 .one_box .am_box .am_image_3{top:70px;}
 }
-@media (max-width:700px){
+@media (max-width:690px){
 .one_box .am_box .am_text{width:200px;height:78px;top:-30px;left:-55px;}
 .one_box .am_box .am_text .am_text_tag01,
 .one_box .am_box .am_text .am_text_tag02{width:80px;}
@@ -725,17 +726,14 @@ height:calc(100% - (78px) );
 .one_box .am_box .am_image_3 .am_3_1{left:15px;width:70px;}
 .one_box .am_box .am_image_3 .am_3_2{left:-10px;width:180px;}
 .one_box .am_box .am_image_4{bottom:100px;width:160px;}
-
-
-
-
-
 }
 
 /* two_box */
+.two_box.content_box{height:auto;}
+.two_box .content_rwd{position:relative;height:auto;}
 .two_box .big_bg_box{position:absolute;top:0;right:0;bottom:0;left:0;margin:auto;width:100%;height:100%;}
 .two_box .big_bg_box img{width:101%;height:100%;}
-.two_box .text_box{float:left;width:70%;margin-top:160px;}
+.two_box .text_box{float:left;width:70%;margin:40px 0 100px 0;}
 .two_box .text_box .description_box{margin-top:30px;}
 .two_box .text_box .description_box .text{width:90%;margin-top:20px;}
 .two_box .text_box .description_box .text:nth-last-child(1){margin-top:0;}
