@@ -1,0 +1,198 @@
+	<!-- nav -->
+	<div class="hor_level_menu">
+		<div class="mob_list_box">
+			<div class="menu_box">
+				<!-- 小裝置_選單按鈕 -->
+				<div class="menu_button_show">
+					<img src="assets/images/general/icon_menu_m_show.svg" alt="">
+				</div>
+				<div class="menu_button_hide">
+					<img src="assets/images/general/icon_menu_m_hide.svg" alt="">
+				</div>
+			</div>
+			<div class="menu_layer desktop">
+				<ul>
+					<li>
+						<div class="item_title off_menulise">
+							<a href="#About"><span>About</span></a>
+						</div>
+					</li>
+					<li>
+						<div class="item_title off_menulise">
+							<a href="#Participate"><span>How to Participate</span></a>
+						</div>
+					</li>
+					<li>
+						<div class="item_title off_menulise">
+							<a href="#Timeline"><span>Timeline</span></a>
+						</div>
+					</li>
+					<li>
+						<div class="item_title off_menulise">
+							<a href="#Award"><span>Awards & Benefits</span></a>
+						</div>
+					</li>
+					<li>
+						<div class="item_title off_menulise">
+							<a href="#Solutions"><span>Our Solutions</span></a>
+						</div>
+					</li>
+					<li class="off">
+						<div class="item_title off_menulise">
+							<a href="#"><span>Shortlist</span></a>
+						</div>
+					</li>
+					<li>
+						<div class="item_title off_menulise">
+							<a href="https://gohealthy.taiwanexcellence.org/newsroom.html" target="_blank"><span>Newsroom</span></a>
+						</div>
+					</li>
+					<!--
+					<li class="mob_list">
+						<div class="item_title off_menulise">
+							<span>
+								<span class="icon_text">Newsroom</span>
+								<img class="icon_select" src="assets/images/general/icon_menu_arrow_down.svg" alt="#">
+							</span>
+						</div>
+						<div class="off">
+							<ul>
+								<li>
+									<div>
+										<a href="https://gohealthy.taiwanexcellence.org/newsroom.html" target="_blank"><span>2025</span></a>
+									</div>
+								</li>
+								<li>
+									<div>
+										<a href="#"><span>2026</span></a>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</li>
+					-->
+					<li class="off">
+						<div class="item_title off_menulise">
+							<a href="#"><span>Winner</span></a>
+						</div>
+					</li>
+					<li>
+						<div class="item_title off_menulise">
+							<a href="https://gohealthy.taiwanexcellence.org/faqs.html"><span>FAQs</span></a>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="menu_layer mobile">
+				<ul>
+					<li>
+						<div class="item_title off_menulise">
+							<a href="#About"><span>About</span></a>
+						</div>
+					</li>
+					<li>
+						<div class="item_title off_menulise">
+							<a href="#Participate"><span>How to Participate</span></a>
+						</div>
+					</li>
+					<li>
+						<div class="item_title off_menulise">
+							<a href="#Timeline"><span>Timeline</span></a>
+						</div>
+					</li>
+					<li>
+						<div class="item_title off_menulise">
+							<a href="#Award"><span>Awards & Benefits</span></a>
+						</div>
+					</li>
+					<li>
+						<div class="item_title off_menulise">
+							<a href="#Solutions"><span>Our Solutions</span></a>
+						</div>
+					</li>
+					<li class="off">
+						<div class="item_title off_menulise">
+							<a href="#"><span>Shortlist</span></a>
+						</div>
+					</li>
+					<li>
+						<div class="item_title off_menulise">
+							<a href="https://gohealthy.taiwanexcellence.org/newsroom.html" target="_blank"><span>Newsroom</span></a>
+						</div>
+					</li>
+					<!--
+					<li class="mob_list">
+						<div class="item_title off_menulise">
+							<span>
+								<span class="icon_text">Newsroom</span>
+								<img class="icon_select" src="assets/images/general/icon_menu_arrow_down.svg" alt="#">
+							</span>
+						</div>
+						<div class="off">
+							<ul>
+								<li>
+									<div>
+										<a href="https://gohealthy.taiwanexcellence.org/newsroom.html" target="_blank"><span>2025</span></a>
+									</div>
+								</li>
+								<li>
+									<div>
+										<a href="#"><span>2026</span></a>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</li>
+					-->
+					<li class="off">
+						<div class="item_title off_menulise">
+							<a href="#"><span>Winner</span></a>
+						</div>
+					</li>
+					<li>
+						<div class="item_title off_menulise">
+							<a href="https://gohealthy.taiwanexcellence.org/faqs.html"><span>FAQs</span></a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div><!-- /nav -->
+
+
+<script>
+$(document).ready(function(){
+
+	/* menu_layer */
+	$(".hor_level_menu .menu_layer li").hover(
+		function () {
+			$(this).children(".off").addClass("on");
+		},
+		function () {
+			$(this).children(".off").removeClass("on");
+		}
+	);
+
+	/* mob button */
+	$(".menu_button_show").click(function(){
+		$(".hor_level_menu").addClass("mob_list_show");
+		$(".menu_button_hide").show();
+		$(".menu_button_show").hide();
+	});
+	$(".menu_button_hide").click(function(){
+		$(".hor_level_menu").removeClass("mob_list_show");
+		$(".menu_button_hide").hide();
+		$(".menu_button_show").show();
+	});
+	$(".menu_layer.mobile a").click(function(){
+		$(".hor_level_menu").removeClass("mob_list_show");
+		$(".menu_button_hide").hide();
+		$(".menu_button_show").show();
+	});
+
+
+
+
+
+});
+</script>

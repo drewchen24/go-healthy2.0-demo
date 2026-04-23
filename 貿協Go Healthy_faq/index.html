@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" lang="en">
+	<meta http-equiv="Content-Type" content="text/html; charset=big5" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="icon" type="image/png" href="assets/images/general/favicon.ico">
+	<title>Go Healthy 2.0</title>
+	<!-- jQuery -->
+	<script src="assets/plugin/jquery_4.0.min.js"></script>
+
+	<!-- googleapis font:Cairo -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+
+	<!-- Tailwind CSS -->
+	<link href="assets/plugin/tailwind.css" rel="stylesheet"/>
+
+	<!-- WOW.js animate -->
+	<link href="assets/plugin/animate.css" rel="stylesheet">
+	<script src="assets/plugin/wow.js"></script>
+	<link href="assets/plugin/wow_license.txt" rel="stylesheet">
+
+	<!-- 輪播：Swiper
+	<link href="assets/plugin/swiper_4.3.5.min.css" rel="stylesheet">
+	<script src="assets/plugin/swiper_4.3.5.min.js"></script> -->
+
+	<!-- Bootstrap v4.3 -->
+	<script src="assets/plugin/bootstrap.min.js"></script>
+	<link href="assets/plugin/bootstrap.css" rel="stylesheet">
+	<link href="assets/plugin/bootstrap-grid-customizing.css" rel="stylesheet">
+
+	<!-- CSS Customize -->
+	<link href="assets/css/type.css" rel="stylesheet">
+	<!-- JS Customize -->
+	<script src="assets/js/type.js"></script>
+
+	<!-- Google Tag Manager
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-KZPH74VR');</script> -->
+	<!-- End Google Tag Manager -->
+
+</head>
+<body>
+<!-- Google Tag Manager (noscript)
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KZPH74VR"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> -->
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- open animation -->
+<div class="open_am_box off">
+	<img class="am_people" src="assets/images/index/one_box_a_image_4.gif" fetchpriority="high" alt="">
+	<img class="am_ball" src="assets/images/index/open_am_ball.png" fetchpriority="high" alt="">
+	<img class="am_title" src="assets/images/index/open_am_title.png" fetchpriority="high" alt="">
+</div>
+<style>
+.open_am_box{position:fixed;top:0;right:0;bottom:0;left:0;margin:auto;width:100%;height:100%;background-color:#ecf2f5;z-index:2000;overflow:hidden;}
+.open_am_box .am_people{position:absolute;top:0;bottom:0;left:50%;margin:auto;margin-left:-400px;width:800px;height:auto;opacity:1;}
+.open_am_box .am_ball{position:absolute;top:0;right:0;bottom:0;left:0;margin:auto;width:100px;height:auto;opacity:0}
+.open_am_box .am_title{position:absolute;top:0;bottom:0;left:50%;margin:auto;margin-left:-233px;width:466px;height:auto;opacity:1;}
+/**/
+.open_am_box .am_people{
+-moz-animation:open_am_people 1.5s linear 0s 1 normal both;
+-webkit-animation:open_am_people 1.5s linear 0s 1 normal both;
+-o-animation:open_am_people 1.5s linear 0s 1 normal both;
+animation:open_am_people 1.5s linear 0s 1 normal both;
+}
+@-moz-keyframes open_am_people{
+80%{opacity:1;}
+100%{opacity:0;}
+}
+@-webkit-keyframes open_am_people{
+80%{opacity:1;}
+100%{opacity:0;}
+}
+@keyframes open_am_ball{
+80%{opacity:1;}
+100%{opacity:0;}
+}
+/**/
+.open_am_box .am_ball{
+-moz-animation:open_am_ball 3s linear 0s 1 normal both;
+-webkit-animation:open_am_ball 3s linear 0s 1 normal both;
+-o-animation:open_am_ball 3s linear 0s 1 normal both;
+animation:open_am_ball 3s linear 0s 1 normal both;
+}
+@-moz-keyframes open_am_ball{
+0%{opacity:0;width:100px;}
+30%{opacity:0;width:100px;}
+40%{opacity:1;width:100px;}
+50%{opacity:1;width:270px;}
+90%{opacity:1;width:270px;}
+100%{opacity:0;width:270px;}
+}
+@-webkit-keyframes open_am_ball{
+0%{opacity:0;width:100px;}
+30%{opacity:0;width:100px;}
+40%{opacity:1;width:100px;}
+50%{opacity:1;width:270px;}
+90%{opacity:1;width:270px;}
+100%{opacity:0;width:270px;}
+}
+@keyframes open_am_ball{
+0%{opacity:0;width:100px;}
+30%{opacity:0;width:100px;}
+40%{opacity:1;width:100px;}
+50%{opacity:1;width:270px;}
+90%{opacity:1;width:270px;}
+100%{opacity:0;width:270px;}
+}
+/**/
+.open_am_box .am_title{
+-moz-animation:open_am_title 3s linear 0s 1 normal both;
+-webkit-animation:open_am_title 3s linear 0s 1 normal both;
+-o-animation:open_am_title 3s linear 0s 1 normal both;
+animation:open_am_title 3s linear 0s 1 normal both;
+}
+@-moz-keyframes open_am_title{
+0%{margin-left:-233px;width:466px;opacity:0;}
+40%{margin-left:-233px;width:466px;opacity:0;}
+50%{margin-left:-233px;width:466px;opacity:1;}
+90%{margin-left:-233px;width:466px;opacity:1;}
+100%{margin-left:-1200px;width:2400px;opacity:0;}
+}
+@-webkit-keyframes open_am_title{
+0%{margin-left:-233px;width:466px;opacity:0;}
+40%{margin-left:-233px;width:466px;opacity:0;}
+50%{margin-left:-233px;width:466px;opacity:1;}
+90%{margin-left:-233px;width:466px;opacity:1;}
+100%{margin-left:-1200px;width:2400px;opacity:0;}
+}
+@keyframes open_am_title{
+0%{margin-left:-233px;width:466px;opacity:0;}
+40%{margin-left:-233px;width:466px;opacity:0;}
+50%{margin-left:-233px;width:466px;opacity:1;}
+90%{margin-left:-233px;width:466px;opacity:1;}
+100%{margin-left:-1200px;width:2400px;opacity:0;}
+}
+</style>
+<script>
+/* open animation */
+setTimeout(function(){
+	$(".open_am_box").animate({ opacity: 0 }, 1000);
+}, 3000);
+setTimeout(function(){
+	$(".open_am_box").hide();
+}, 4000);
+</script>
+
+<!-- nav -->
+<nav class="ajax_nav wow" data-wow-duration="0s" data-wow-delay="0s"></nav><!-- /nav -->
+
+<!-- submit_now -->
+<div class="submit_now fixed off wow" data-wow-duration="0s" data-wow-delay="0s">
+	<div class="bg_radius_3 bg_p2 action"></div>
+	<div class="bg_radius_2 bg_p2 action"></div>
+	<div class="bg_radius_1 bg_p2 action"></div>
+	<a href="https://gohealthy.surveycake.biz/s/bLG0x" target="_blank"><h3 class="tc_p1 fw600">Submit<br>Now</h3></a>
+</div><!-- /submit_now -->
+
+<!-- one_box -->
+<section class="one_box content_box bg_n1_300 wow" data-wow-duration="0s" data-wow-delay="0s">
+	<div class="big_bg_box"><img src="assets/images/index/one_box_big_bg.png" alt=""></div>
+	<div class="content_rwd">
+		<div class="bg_box">
+			<div class="am_box bg_fff">
+				<div class="am_text wow fadeIn" data-wow-delay="4s">
+					<img class="am_text_bg" src="assets/images/index/one_box_title.png" alt="">
+					<img class="am_text_tag01" src="assets/images/index/one_box_title_tag01.png" fetchpriority="high" alt="">
+					<img class="am_text_tag02 wow" data-wow-delay="5s" src="assets/images/index/one_box_title_tag02.png" alt="">
+				</div>
+				<div class="am_image_1_2 wow" data-wow-delay="3s"><img src="assets/images/index/one_box_a_image_1_2.gif" alt=""></div>
+				<div class="am_image_1_1 wow" data-wow-delay="3s"><img src="assets/images/index/one_box_a_image_1_1.gif" alt=""></div>
+				<div class="am_image_2 wow" data-wow-delay="3s"><img src="assets/images/index/one_box_a_image_2.gif" alt=""></div>
+				<div class="am_image_3 wow" data-wow-delay="3s">
+					<img class="am_bg" src="assets/images/index/one_box_a_image_3_bg.png" alt="">
+					<img class="am_3_1" src="assets/images/index/one_box_a_image_3_1.gif" alt="">
+					<img class="am_3_2" src="assets/images/index/one_box_a_image_3_2.gif" alt="">
+				</div>
+				<div class="am_image_4 wow" data-wow-delay="3s"><img src="assets/images/index/one_box_a_image_4.gif" alt=""></div>
+			</div>
+			<div class="submit_now">
+				<div class="bg_radius_3 bg_p2"></div>
+				<div class="bg_radius_2 bg_p2"></div>
+				<div class="bg_radius_1 bg_p2"></div>
+				<a href="https://gohealthy.surveycake.biz/s/bLG0x" target="_blank"><h3 class="tc_p1 fw600">Submit<br>Now</h3></a>
+			</div>
+		</div>
+	</div>
+</section><!-- /one_box -->
+
+<!-- two_box -->
+<section id="About" class="two_box content_box wow" data-wow-duration="0s" data-wow-delay="0s">
+	<div class="big_bg_box"><img src="assets/images/index/two_box_big_bg.png" alt=""></div>
+	<div class="am_two_bike wow" data-wow-delay="0.5s">
+		<div class="a_image_1"><img src="assets/images/index/one_box_a_image_1_1.gif" alt=""></div>
+	</div>
+	<div class="marquee_wrapper">
+		<div class="marquee_content">
+			<a class="item_box" href="https://gohealthy.surveycake.biz/s/bLG0x" target="_blank">
+				<img class="am_img" src="assets/images/index/one_box_a_image_1_1.gif" alt="">
+				<h1 class="title_text text tc_p3_400 fw700">Turn Your Ideas Into US $30,000</h1>
+			</a>
+			<a class="item_box" href="https://gohealthy.surveycake.biz/s/bLG0x" target="_blank">
+				<img class="am_img" src="assets/images/index/one_box_a_image_1_1.gif" alt="">
+				<h1 class="title_text text tc_p3_400 fw700">Turn Your Ideas Into US $30,000</h1>
+			</a>
+		</div>
+	</div>
+	<div class="content_rwd">
+		<div class="text_box wow fadeInUpBig" data-wow-duration="2s" data-wow-delay="0.5s">
+			<div class="title_box">
+				<h1 class="title_text text title_03 tc_p1_600 fw700">About the Campaign</h1>
+				<button class="button btn_style_1" type="button" onclick="javascript:location.href='#Video'">
+					<p>View more</p>
+					<img class="icon on" src="assets/images/general/icon_arr_w_right.svg" alt="">
+					<img class="icon off" src="assets/images/general/icon_arr_w_right_h.svg" alt="">
+				</button>
+			</div>
+			<div class="description_box">
+				<h3 class="text body_01 tc_n1_950">Health is a shared aspiration for everyone, influencing our quality of life and future happiness. As global attention on health issues continues to rise, enhancing physical and mental well-being has become a collective mission for societies, cities, and businesses worldwide.</h3>
+				<h3 class="text body_01 tc_n1_950">In 2025, the "Go Healthy with Taiwan" campaign attracted 638 proposals from 55 countries. Building on last year’s success, the 2026 theme of the campaign is "Designing Healthier Futures Together."</h3>
+				<h3 class="text body_01 tc_n1_950">We sincerely invite proposals from all sectors to participate in the "Go Healthy with Taiwan 2026",  where we seek innovative solutions to enhance global health and well-being.</h3>
+				<h3 class="text body_01 tc_n1_950">No matter your field, we encourage you to propose ideas that integrate Taiwanese products, solutions, or business models, to make a real impact on health and well-being in your local communities, cities, businesses, and organizations.</h3>
+				<h3 class="text body_01 tc_n1_950">The selected proposals will be supported in establishing cooperation with Taiwanese enterprises, to create value through bilateral cooperation. <br>
+				Together, we can contribute to a healthier future, where well-being is accessible to all.</h3>
+			</div>
+		</div>
+	</div>
+</section><!-- /two_box -->
+
+<!-- five_box -->
+<section class="five_box content_box bg_p1_100 wow" data-wow-duration="0s" data-wow-delay="0s">
+	<div class="big_bg_box"><img src="assets/images/index/five_box_big_bg.png" alt=""></div>
+	<div class="content_rwd">
+		<div class="vidio_box">
+			<iframe class="vidio_box" src="https://www.youtube.com/embed/nfO_krE0pA4" title="Go Healthy with Taiwan Global Campaign" frameborder="0" width="100%" height="100%" align="top" marginwidth="0pix" marginheight="0pix" scrolling="no"></iframe>
+		</div>
+	</div>
+</section><!-- /five_box -->
+
+<!-- six_box -->
+<section id="Participate" class="six_box content_box wow" data-wow-duration="0s" data-wow-delay="0s">
+	<div class="big_bg_box"><img src="assets/images/index/six_box_big_bg.png" alt=""></div>
+	<div class="content_rwd">
+		<div class="left_box">
+			<div class="text_box">
+				<div class="title_box">
+					<h1 class="title_text text title_03 tc_p1_600 fw700">How to Participate</h1>
+					<div class="btn_box_1">
+						<button class="button btn_style_1 am_action_video" type="button" onclick="javascript:location.href='#Video'">
+							<p>How to Apply</p>
+							<img class="icon on" src="assets/images/general/icon_arr_w_right.svg" alt="">
+							<img class="icon off" src="assets/images/general/icon_arr_w_right_h.svg" alt="">
+						</button>
+					</div>
+					<div class="btn_box_2">
+						<button class="button btn_style_1" type="button" onclick="window.open('https://taitraebs-my.sharepoint.com/:b:/g/personal/iep_taitra_org_tw/IQBd46zPI9GfRrinQpx5xj3WAajfrFiHdAruN0-Uh_KIdyc?e=cN4SDB')">
+							<p>Rules for Proposal Campaign</p>
+							<img class="icon on" src="assets/images/general/icon_download.svg" alt="">
+							<img class="icon off" src="assets/images/general/icon_download_h.svg" alt="">
+						</button>
+					</div>
+				</div>
+				<div class="description_box">
+					<div class="slide_list_box">
+						<ul>
+							<li class="slide_title_box">
+								<h2 class="text subtitle_01 tc_p1_600">Eligibility</h2>
+								<img class="icon add" src="assets/images/general/icon_add.svg" alt="">
+								<img class="icon reduce off" src="assets/images/general/icon_reduce.svg" alt="">
+							</li>
+							<li class="explain off"><h3 class="text body_01 tc_n1_500">1.The proposer must be a member of a company, government agency, legal entity, or non-legal entity group. Legal entities or non-legal entity groups may include research institutions, non-governmental organizations, public associations, and universities, etc.</h3></li>
+							<li class="explain off"><h3 class="text body_01 tc_n1_500">2.The proposer shall provide supporting documents of the affiliated company, government agency, legal entity, or non-legal entity group (such as a website URL, screenshots of webpage content, articles of association, registration, certificates or approval letters of the company or legal entity, etc.).</h3></li>
+							<li class="explain off"><h3 class="text body_01 tc_n1_500">3.The proposer shall provide supporting documents of his/her identity and relationship with the affiliated company, government agency, legal entity, or non-legal entity group, etc (such as an employee business card, employee ID, or student ID). If a proposer is a minor under the law of his/her country, a letter of consent shall be submitted by his/her parent or legal guardian before the proposal enters the semifinal stage. </h3></li>
+							<li class="explain off"><h3 class="text body_01 tc_n1_500">4.If a proposer comprises two or more persons, one of them shall be designated as the coordinator for communication with the Implementer. </h3></li>
+						</ul>
+						<ul>
+							<li class="slide_title_box">
+								<h2 class="text subtitle_01 tc_p1_600">Submission Guidelines</h2>
+								<img class="icon add" src="assets/images/general/icon_add.svg" alt="">
+								<img class="icon reduce off" src="assets/images/general/icon_reduce.svg" alt="">
+							</li>
+							<li class="explain off"><h3 class="text body_01 tc_n1_500">1.Each proposer represents and warrants that his/her proposal does not conflict with any contractual responsibilities or laws or regulations. If the content of the proposal belongs to a project that has already been made public, that is ongoing, or that has been sponsored by any public or private institutions, the proposer shall disclose this in the proposal. If the Implementer requests further explanation, the proposer shall cooperate and provide the necessary information. </h3></li>
+							<li class="explain off"><h3 class="text body_01 tc_n1_500">2.Each proposal must involve the application of products or solutions from Taiwanese enterprises, bilateral technical cooperation with Taiwan enterprises, or other collaborations (e.g., innovative business models); it must be relevant to the organization that the proposer belongs to; and its goal must be to promote health and well-being in local cities, communities, businesses, or organizations. The Implementer reserves the right to review each proposer's qualifications. Each proposer shall submit documents and information required by the Implementer for review and may not raise any objection to the results of the review. </h3></li>
+							<li class="explain off"><h3 class="text body_01 tc_n1_500">3.Each proposal shall be made in English, and the contents shall include the benefits of promoting health and well-being, as well as its innovation, feasibility, and connection of Taiwanese products or solutions. </h3></li>
+							<li class="explain off"><h3 class="text body_01 tc_n1_500">4.If a proposal is put forward in violation of the Rules, the Implementer will reject it, to which the proposer may not raise any objection on any grounds. </h3></li>
+						</ul>
+						<ul>
+							<li class="slide_title_box">
+								<h2 class="text subtitle_01 tc_p1_600">Selection Criteria</h2>
+								<img class="icon add" src="assets/images/general/icon_add.svg" alt="">
+								<img class="icon reduce off" src="assets/images/general/icon_reduce.svg" alt="">
+							</li>
+							<li class="explain off"><h3 class="text body_01 tc_n1_500">1.The Implementer will form a selection committee with professionals from health industry, academic and research institutions, and government agencies to review the submitted proposals. The proposers agree to respect and accept the selection method and results and not to raise any objections on any grounds.</h3></li>
+							<li class="explain off"><h3 class="text body_01 tc_n1_500">2.Proposals will be evaluated for excellence in four categories, including (1) benefits of enhancing health and well-being (25%); (2) connection of products or solutions from Taiwanese enterprises (25%); (3) innovation (25%); and (4) feasibility (25%). </h3></li>
+							<li class="explain off"><h3 class="text body_01 tc_n1_500">Note: Selection will be based on the "ranking system." Scores will be assigned according to the four selection categories and their weights. The scores will be added up, converted into rankings, and sorted starting from the lowest total score. The selection committee will make a decision based on the merits of each proposal. </h3></li>
+						</ul>
+						<ul>
+							<li class="slide_title_box no_cursor">
+								<h2 class="text subtitle_01 tc_p1_600">Deadline for Submission</h2>
+								<h3 class="text body_01 tc_n1_500">Proposals will be accepted from April 29 to August 5, 2026. Proposals must be submitted by 23:59, August 5, 2026, GMT+8. </h3>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--<div class="right_box am_1">
+			<img src="assets/images/index/six_box_a_image_1.gif" alt="">
+		</div>-->
+		<div class="right_box am_2">
+			<img src="assets/images/index/one_box_a_image_4.gif" alt="">
+		</div>
+	</div>
+</section><!-- /six_box -->
+
+<!-- eight_box -->
+<section id="Timeline" class="eight_box content_box bg_p1_100 wow" data-wow-duration="0s" data-wow-delay="0s">
+	<div class="big_bg_box"><img src="assets/images/index/eight_box_big_bg.png" alt=""></div>
+	<div class="content_rwd">
+		<div class="title_box">
+			<h1 class="title_text text title_03 tc_p1_700 fw700 tac">Timeline</h1>
+			<h3 class="text subtitle_01 tc_p1_700 tac">Based on Taiwan time: GMT+8</h3>
+		</div>
+		<div class="am_box">
+			<div class="fireworks_box">
+				<div class="am no1 wow fadeIn" data-wow-duration="2s" data-wow-delay="1.5s">
+					<img class="icon_bg" src="assets/images/index/eight_box_icon_bg.svg" alt="">
+					<div class="text_box">
+						<div class="text subtitle_01 fw700 tc_p3_400 no1">01</div>
+						<div class="text body_01 fw700 tc_n1_950 no2">Qualification Review</div>
+						<div class="text body_01 fw400 tc_n1_950 no3">April 29 to August 14, 2026</div>
+					</div>
+				</div>
+				<div class="am no2 wow fadeIn" data-wow-duration="2s" data-wow-delay="2s">
+					<img class="icon_bg" src="assets/images/index/eight_box_icon_bg.svg" alt="">
+					<div class="text_box">
+						<div class="text subtitle_01 fw700 tc_p3_400 no1">02</div>
+						<div class="text body_01 fw700 tc_n1_950 no2">Preliminary Selection</div>
+						<div class="text body_01 fw400 tc_n1_950 no3">August 18 to September 6, 2026</div>
+						<div class="text body_01 fw400 tc_n1_950 no3">Up to twenty proposals will be shortlisted (with flexibility to adjust the number of shortlisted proposals)</div>
+					</div>
+				</div>
+				<div class="am no3 wow fadeIn" data-wow-duration="2s" data-wow-delay="2.5s">
+					<img class="icon_bg" src="assets/images/index/eight_box_icon_bg.svg" alt="">
+					<div class="text_box">
+						<div class="text subtitle_01 fw700 tc_p3_400 no1">03</div>
+						<div class="text body_01 fw700 tc_n1_950 no2">Announcement of the semifinal shortlist</div>
+						<div class="text body_01 fw400 tc_n1_950 no3">Week of September 21-24, 2026</div>
+					</div>
+				</div>
+				<div class="am no4 wow fadeIn" data-wow-duration="2s" data-wow-delay="3s">
+					<img class="icon_bg" src="assets/images/index/eight_box_icon_bg.svg" alt="">
+					<div class="text_box">
+						<div class="text subtitle_01 fw700 tc_p3_400 no1">04</div>
+						<div class="text body_01 fw700 tc_n1_950 no2">1-on-1 Online Mentorship for Semifinalists with Industry Experts</div>
+						<div class="text body_01 fw400 tc_n1_950 no3">September 21-October 8, 2026</div>
+					</div>
+				</div>
+				<div class="am no5 wow fadeIn" data-wow-duration="2s" data-wow-delay="3.5s">
+					<img class="icon_bg" src="assets/images/index/eight_box_icon_bg.svg" alt="">
+					<div class="text_box">
+						<div class="text subtitle_01 fw700 tc_p3_400 no1">05</div>
+						<div class="text body_01 fw700 tc_n1_950 no2">Semifinal</div>
+						<div class="text body_01 fw400 tc_n1_950 no3">October 29, 2026</div>
+						<div class="text body_01 fw400 tc_n1_950 no3">Up to six proposals will be shortlisted</div>
+					</div>
+				</div>
+				<div class="am no6 wow fadeIn" data-wow-duration="2s" data-wow-delay="4s">
+					<img class="icon_bg" src="assets/images/index/eight_box_icon_bg.svg" alt="">
+					<div class="text_box">
+						<div class="text subtitle_01 fw700 tc_p3_400 no1">06</div>
+						<div class="text body_01 fw700 tc_n1_950 no2">Announcement of the Finalists</div>
+						<div class="text body_01 fw400 tc_n1_950 no3">Week of November 9–13, 2026</div>
+					</div>
+				</div>
+				<div class="am no7 wow fadeIn" data-wow-duration="2s" data-wow-delay="4.5s">
+					<img class="icon_bg" src="assets/images/index/eight_box_icon_bg.svg" alt="">
+					<div class="text_box">
+						<div class="text subtitle_01 fw700 tc_p3_400 no1">07</div>
+						<div class="text body_01 fw700 tc_n1_950 no2">1-on-1 Online Mentorship for Finalists with Industry Experts</div>
+						<div class="text body_01 fw400 tc_n1_950 no3">November 13–20, 2026</div>
+					</div>
+				</div>
+				<div class="am no8 wow fadeIn" data-wow-duration="2s" data-wow-delay="5s">
+					<img class="icon_bg" src="assets/images/index/eight_box_icon_bg.svg" alt="">
+					<div class="text_box">
+						<div class="text subtitle_01 fw700 tc_p3_400 no1">08</div>
+						<div class="text body_01 fw700 tc_n1_950 no2">Final Competition</div>
+						<div class="text body_01 fw400 tc_n1_950 no3">November 30-December 5, 2026</div>
+					</div>
+				</div>
+				<div class="am no9 wow fadeIn" data-wow-duration="2s" data-wow-delay="5.5s">
+					<img class="icon_bg" src="assets/images/index/eight_box_icon_bg.svg" alt="">
+					<div class="text_box">
+						<div class="text subtitle_01 fw700 tc_p3_400 no1">09</div>
+						<div class="text body_01 fw700 tc_n1_950 no2">Announcement of the Winners</div>
+						<div class="text body_01 fw400 tc_n1_950 no3">Early December 2026</div>
+						<div class="text body_01 fw400 tc_n1_950 no3">Up to three best proposals (or no best proposal) will be selected </div>
+					</div>
+				</div>
+			</div>
+			<div class="am_road_box">
+				<img class="road" src="assets/images/index/eight_box_am_road.png" alt="">
+				<img class="bike wow" data-wow-delay="0s" data-wow-offset="700" src="assets/images/index/eight_box_bottom_bike.gif" alt="">
+			</div>
+		</div>
+	</div>
+</section><!-- /eight_box -->
+
+<!-- nine_box -->
+<section id="Award" class="nine_box content_box wow" data-wow-duration="0s" data-wow-delay="0s">
+	<div class="big_bg_box"><img src="assets/images/index/nine_box_big_bg.png" alt=""></div>
+	<div class="content_rwd">
+		<div class="text_box">
+			<div class="title_box">
+				<h1 class="title_text text title_03 tc_p1_700 fw700">Award & Benefits</h1>
+			</div>
+		</div>
+		<div class="item_box">
+			<div class="item no1 bg_p1_300 wow fadeInUpBig" data-wow-duration="2s" data-wow-delay="0s">
+				<div class="no1_box">
+					<h3 class="text subtitle_01 tc_n1_950 fw700 tal">US$30,000 prize</h3>
+				</div>
+				<h4 class="no2 text body_01 tc_n1_950 fw400 tal">A maximum of three best proposals will be awarded US$30,000 prize money each. </h4>
+				<h4 class="no2 text body_01 tc_n1_950 fw400 tal">Note: The organizer reserves the right to leave the awards vacant if the judging criteria are not met.</h4>
+				<img class="am_bg" src="assets/images/index/nine_box_am_1_bg.png" alt="">
+				<img class="am" src="assets/images/index/nine_box_am_1.png" alt="">
+			</div>
+			<div class="item no2 bg_p1_300 wow fadeInUpBig" data-wow-duration="2s" data-wow-delay="1s">
+				<div class="no1_box">
+					<h3 class="text subtitle_01 tc_n1_950 fw700 tal">Sponsored Trip to Taiwan</h3>
+				</div>
+				<h4 class="no2 text body_01 tc_n1_950 fw400 tal">The top 6 finalists will join a sponsored trip to Taiwan featuring enterprise tours, health service experiences, and pitch coaching for the final presentation.</h4>
+				<img class="am_bg" src="assets/images/index/nine_box_am_2_bg.png" alt="">
+				<img class="am" src="assets/images/index/nine_box_am_2.png" alt="">
+			</div>
+			<div class="item no3 bg_p1_300 wow fadeInUpBig" data-wow-duration="2s" data-wow-delay="2s">
+				<div class="no1_box">
+					<h3 class="text subtitle_01 tc_n1_950 fw700 tal">1-on-1 Expert Mentorship</h3>
+				</div>
+				<h4 class="no2 text body_01 tc_n1_950 fw400 tal">Top 20 finalists will receive 1-on-1 expert mentorship to refine proposal and connect with Taiwan’s industry resources.</h4>
+				<img class="am_bg" src="assets/images/index/nine_box_am_3_bg.png" alt="">
+				<img class="am" src="assets/images/index/nine_box_am_3.png" alt="">
+			</div>
+			<div class="item no4 bg_p1_300 wow fadeInUpBig" data-wow-duration="2s" data-wow-delay="3s">
+				<div class="no1_box">
+					<h3 class="text subtitle_01 tc_n1_950 fw700 tal">Future Growth</h3>
+				</div>
+				<h4 class="no2 text body_01 tc_n1_950 fw400 tal">Selected proposals will unlock high-level collaboration opportunities, granting access to  potential long-term corporate partnerships.</h4>
+				<img class="am_bg" src="assets/images/index/nine_box_am_4_bg.png" alt="">
+				<img class="am" src="assets/images/index/nine_box_am_4.png" alt="">
+			</div>
+		</div>
+	</div>
+</section><!-- /nine_box -->
+
+<!-- ten_box Tailwind CSS 滾動轉向：垂直轉水平轉垂直 -->
+<section id="Solutions" class="ten_box sticky-container h-screen">
+	<main class="item_box overflow-x-hidden flex sticky top-0 h-4 h-screen">
+		<section class="item no1">
+			<div class="item_content_box">
+				<img class="ten_box_bg_1" src="assets/images/index/ten_box_big_bg_1.png" alt="">
+				<img class="am_1" src="assets/images/index/eight_box_bottom_bike.gif" alt="">
+				<div class="am_box no1">
+					<h1 class="title_text text title_03 tc_n1_950 fw700">Our Solutions</h1>
+					<div class="sub_title">
+						<img class="icon_right" src="assets/images/index/ten_box_icon_right.svg" alt="">
+					</div>
+				</div>
+				<a class="am_box no2" href="https://gohealthy.taiwanexcellence.org/cycling.html" target="_blank">
+					<img class="am off" src="assets/images/index/ten_box_am_1_2.gif" alt="">
+					<img class="am action" src="assets/images/index/ten_box_am_1_2.png" alt="">
+					<h2 class="title text title_03 fw600 tc_p1_600">Cycling</h2>
+				</a>
+				<a class="am_box no3" href="https://gohealthy.taiwanexcellence.org/SportsTech.html" target="_blank">
+					<img class="am off" src="assets/images/index/ten_box_am_1_3.gif" alt="">
+					<img class="am action" src="assets/images/index/ten_box_am_1_3.png" alt="">
+					<h2 class="title text title_03 fw600 tc_p1_600">Sports Tech</h2>
+				</a>
+				<a class="am_box no4" href="https://gohealthy.taiwanexcellence.org/Healthcare.html" target="_blank">
+					<img class="am off" src="assets/images/index/ten_box_am_1_4.gif" alt="">
+					<img class="am action" src="assets/images/index/ten_box_am_1_4.png" alt="">
+					<h2 class="title text title_03 fw600 tc_p1_600">Smart <br>Healthcare</h2>
+					<h3 class="st text body_01 tc_p1_600">Health Check-ups & <br>Aesthetic Services</h3>
+				</a>
+			</div>
+		</section>
+		<section class="item no2"></section>
+	</main>
+</section><!-- /ten_box -->
+
+<!-- eleven_box -->
+<section id="Video" class="eleven_box content_box bg_p1_200 wow" data-wow-duration="0s" data-wow-delay="0s">
+	<div class="big_bg_box"><img src="assets/images/index/eleven_box_big_bg.png" alt=""></div>
+	<div class="content_rwd">
+		<div class="top_box"><h1 class="title_text text title_03 tc_p1_700 fw700 tal">Video</h1></div>
+		<div class="left_box">
+			<div class="tag_box">
+				<div class="tag_top_box off">
+					<div class="tag no1 click"><h4 class="text body_01 tc_n1_900">category</h4></div>
+					<div class="tag no2 off"><h4 class="text body_01 tc_n1_900">category</h4></div>
+				</div>
+				<div class="item_box">
+					<div class="item no1 on">
+						<div class="vedio_name no1 click"><h2 class="text subtitle_03 tc_n1_900 tal">Global Campaign</h2></div>
+						<div class="vedio_name no2"><h2 class="text subtitle_03 tc_n1_900 tal">About the Campaign</h2></div>
+						<div class="vedio_name no3"><h2 class="text subtitle_03 tc_n1_900 tal">How to Apply</h2></div>
+						<div class="vedio_name no4"><h2 class="text subtitle_03 tc_n1_900 tal">Official Launch</h2></div>
+					</div>
+					<div class="item no2 off">
+						<div class="vedio_name no1 click"><h2 class="text subtitle_03 tc_n1_900 tal">vedio name no2 vedio1</h2></div>
+						<div class="vedio_name no2"><h2 class="text subtitle_03 tc_n1_900 tal">vedio name no2 vedio2</h2></div>
+						<div class="vedio_name no3"><h2 class="text subtitle_03 tc_n1_900 tal">vedio name no2 vedio3</h2></div>
+						<div class="vedio_name no4"><h2 class="text subtitle_03 tc_n1_900 tal">vedio name no2 vedio4</h2></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="right_box no1">
+			<div class="vidio_box no1">
+				<iframe src="https://www.youtube.com/embed/nfO_krE0pA4?controls=1" title="Go Healthy with Taiwan Global Campaign" frameborder="0" align="top" marginwidth="0pix" marginheight="0pix" scrolling="no"></iframe>
+			</div>
+			<div class="vidio_box no2 off">
+				<iframe src="https://www.youtube.com/embed/QAEjYsy8cGA?controls=1" title="About the Campaign" frameborder="0" align="top" marginwidth="0pix" marginheight="0pix" scrolling="no"></iframe>
+			</div>			
+			<div class="vidio_box no3 off">
+				<iframe src="https://www.youtube.com/embed/jBgbr4tHjtk?controls=1" title="How to Apply" frameborder="0" align="top" marginwidth="0pix" marginheight="0pix" scrolling="no"></iframe>
+			</div>
+			<div class="vidio_box no4 off">
+				<iframe src="https://www.youtube.com/embed/mnLEOf0iqyk?controls=1" title="Official Launch" frameborder="0" align="top" marginwidth="0pix" marginheight="0pix" scrolling="no"></iframe>
+			</div>
+		</div>
+		<div class="right_box no2 off">
+			<div class="vidio_box no1">no2 vedio1 確認連結後刪除該句
+				<iframe class="vidio_box" src="https://www.youtube.com/embed/nfO_krE0pA4" title="Go Healthy with Taiwan Global Campaign" frameborder="0" width="100%" height="100%" align="top" marginwidth="0pix" marginheight="0pix" scrolling="no"></iframe>
+			</div>
+			<div class="vidio_box no2 off">no2 vedio2 確認連結後刪除該句
+				<iframe class="vidio_box" src="https://www.youtube.com/embed/nfO_krE0pA4" title="Go Healthy with Taiwan Global Campaign" frameborder="0" width="100%" height="100%" align="top" marginwidth="0pix" marginheight="0pix" scrolling="no"></iframe>
+			</div>
+			<div class="vidio_box no3 off">no2 vedio3 確認連結後刪除該句
+				<iframe class="vidio_box" src="https://www.youtube.com/embed/nfO_krE0pA4" title="Go Healthy with Taiwan Global Campaign" frameborder="0" width="100%" height="100%" align="top" marginwidth="0pix" marginheight="0pix" scrolling="no"></iframe>
+			</div>
+			<div class="vidio_box no4 off">no2 vedio4 確認連結後刪除該句
+				<iframe class="vidio_box" src="https://www.youtube.com/embed/nfO_krE0pA4" title="Go Healthy with Taiwan Global Campaign" frameborder="0" width="100%" height="100%" align="top" marginwidth="0pix" marginheight="0pix" scrolling="no"></iframe>
+			</div>
+		</div>
+		<div class="bottom_box no1">
+			<div class="icon_box no1">
+				<img class="icon_left no_pointer" src="assets/images/index/eleven_box_icon_left_d.svg" alt="">
+				<img class="icon_right vedio_2" src="assets/images/index/eleven_box_icon_right.svg" alt="">
+				<div class="icon_line_box">
+					<div class="line_bg"></div>
+					<div class="line_up w_25"></div>
+				</div>
+			</div>
+			<div class="icon_box no2 off">
+				<img class="icon_left vedio_1" src="assets/images/index/eleven_box_icon_left.svg" alt="">
+				<img class="icon_right vedio_3" src="assets/images/index/eleven_box_icon_right.svg" alt="">
+				<div class="icon_line_box">
+					<div class="line_bg"></div>
+					<div class="line_up w_50"></div>
+				</div>
+			</div>
+			<div class="icon_box no3 off">
+				<img class="icon_left vedio_2" src="assets/images/index/eleven_box_icon_left.svg" alt="">
+				<img class="icon_right vedio_4" src="assets/images/index/eleven_box_icon_right.svg" alt="">
+				<div class="icon_line_box">
+					<div class="line_bg"></div>
+					<div class="line_up w_75"></div>
+				</div>
+			</div>
+			<div class="icon_box no4 off">
+				<img class="icon_left vedio_3" src="assets/images/index/eleven_box_icon_left.svg" alt="">
+				<img class="icon_right no_pointer" src="assets/images/index/eleven_box_icon_right_d.svg" alt="">
+				<div class="icon_line_box">
+					<div class="line_bg"></div>
+					<div class="line_up w_100"></div>
+				</div>
+			</div>
+		</div>
+		<div class="bottom_box no2 off">
+			<div class="icon_box no1">
+				<img class="icon_left" src="assets/images/index/eleven_box_icon_left.svg" alt="">
+				<img class="icon_right vedio_2" src="assets/images/index/eleven_box_icon_right.svg" alt="">
+				<div class="icon_line_box">
+					<div class="line_bg"></div>
+					<div class="line_up w_25"></div>
+				</div>
+			</div>
+			<div class="icon_box no2 off">
+				<img class="icon_left vedio_1" src="assets/images/index/eleven_box_icon_left.svg" alt="">
+				<img class="icon_right vedio_3" src="assets/images/index/eleven_box_icon_right.svg" alt="">
+				<div class="icon_line_box">
+					<div class="line_bg"></div>
+					<div class="line_up w_50"></div>
+				</div>
+			</div>
+			<div class="icon_box no3 off">
+				<img class="icon_left vedio_2" src="assets/images/index/eleven_box_icon_left.svg" alt="">
+				<img class="icon_right vedio_4" src="assets/images/index/eleven_box_icon_right.svg" alt="">
+				<div class="icon_line_box">
+					<div class="line_bg"></div>
+					<div class="line_up w_75"></div>
+				</div>
+			</div>
+			<div class="icon_box no4 off">
+				<img class="icon_left vedio_3" src="assets/images/index/eleven_box_icon_left.svg" alt="">
+				<img class="icon_right" src="assets/images/index/eleven_box_icon_right.svg" alt="">
+				<div class="icon_line_box">
+					<div class="line_bg"></div>
+					<div class="line_up w_100"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section><!-- /eleven_box -->
+
+<!-- twelve_box
+<section class="twelve_box content_box bg_n1_100 wow" data-wow-duration="0s" data-wow-delay="0s">
+	<div class="content_rwd">
+		<div class="map_box">
+			<div class="bg_map">
+				<img class="map" src="assets/images/index/twelve_box_bg_map.png" alt="">
+			</div>
+			<div class="bg_map">
+				<div class="item_box no1">
+					<div class="am_item off">
+						<img class="item_icon" src="assets/images/index/twelve_box_item_icon_1.svg" alt="">
+						<h3 class="text subtitle_03 tc_p3_400 tal">Mar 25 – Mar 28</h3>
+						<h4 class="narrate text body_03 tc_n1_50 tal">Taiwan Excellence Pavilion at TAIPEI CYCLE (Bicycle)</h4>
+					</div>
+					<div class="item_origin">
+						<div class="origin_icon no2 off"></div>
+						<div class="origin_icon no1"></div>
+					</div>
+				</div>
+				<div class="item_box no2">
+					<div class="am_item off">
+						<img class="item_icon" src="assets/images/index/twelve_box_item_icon_2.svg" alt="">
+						<h3 class="text subtitle_03 tc_p1_400 tal">Mar 9 – Mar 12</h3>
+						<h4 class="narrate text body_03 tc_n1_50 tal">Taiwan Excellence Pavilion at HIMSS</h4>
+					</div>
+					<div class="item_origin">
+						<div class="origin_icon no2 off"></div>
+						<div class="origin_icon no1"></div>
+					</div>
+				</div>
+				<div class="item_box no3">
+					<div class="am_item off">
+						<img class="item_icon" src="assets/images/index/twelve_box_item_icon_2.svg" alt="">
+						<h3 class="text subtitle_03 tc_p1_400 tal">Apr 16 – Apr 19</h3>
+						<h4 class="narrate text body_03 tc_n1_50 tal">Taiwan Excellence Pavilion at FIBO</h4>
+					</div>
+					<div class="item_origin">
+						<div class="origin_icon no2 off"></div>
+						<div class="origin_icon no1"></div>
+					</div>
+				</div>
+				<div class="item_box no4">
+					<div class="am_item off">
+						<img class="item_icon" src="assets/images/index/twelve_box_item_icon_2.svg" alt="">
+						<h3 class="text subtitle_03 tc_p1_400 tal">Jun 22 – Jun 24</h3>
+						<h4 class="narrate text body_03 tc_n1_50 tal">Taiwan Excellence Pavilion at Taiwan Expo in Europe</h4>
+					</div>
+					<div class="item_origin">
+						<div class="origin_icon no2 off"></div>
+						<div class="origin_icon no1"></div>
+					</div>
+				</div>
+				<div class="item_box no5">
+					<div class="am_item off">
+						<img class="item_icon" src="assets/images/index/twelve_box_item_icon_2.svg" alt="">
+						<h3 class="text subtitle_03 tc_p1_400 tal">Jul 15 – Jul 17</h3>
+						<h4 class="narrate text body_03 tc_n1_50 tal">Taiwan Excellence Pavilion at Taiwan Expo in Japan</h4>
+					</div>
+					<div class="item_origin">
+						<div class="origin_icon no2 off"></div>
+						<div class="origin_icon no1"></div>
+					</div>
+				</div>
+				<div class="item_box no6">
+					<div class="am_item off">
+						<img class="item_icon" src="assets/images/index/twelve_box_item_icon_2.svg" alt="">
+						<h3 class="text subtitle_03 tc_p1_300 tal">Jul 18- Jul 19</h3>
+						<h4 class="narrate text body_03 tc_n1_50 tal">Taiwan Excellence Promotion in collaboration with the Chinese Professional Baseball League (CPBL)</h4>
+					</div>
+					<div class="item_origin">
+						<div class="origin_icon no2 off"></div>
+						<div class="origin_icon no1"></div>
+					</div>
+				</div>
+				<div class="item_box no10">
+					<div class="am_item off">
+						<img class="item_icon" src="assets/images/index/twelve_box_item_icon_1.svg" alt="">
+						<h3 class="text subtitle_03 tc_p3_400 tal">Sep 24 – Sep 26</h3>
+						<h4 class="narrate text body_03 tc_n1_50 tal">Taiwan Excellence Pavilion at Taiwan Expo in the United States</h4>
+					</div>
+					<div class="item_origin">
+						<div class="origin_icon no2 off"></div>
+						<div class="origin_icon no1"></div>
+					</div>
+				</div>
+				<div class="item_box no11">
+					<div class="am_item off">
+						<img class="item_icon" src="assets/images/index/twelve_box_item_icon_3.svg" alt="">
+						<h3 class="text subtitle_03 tc_p4_400 tal">Oct 7 – Oct 9</h3>
+						<h4 class="narrate text body_03 tc_n1_50 tal">Taiwan Excellence Pavilion at Medical Exhibition in Japan (Medical)</h4>
+					</div>
+					<div class="item_origin">
+						<div class="origin_icon no2 off"></div>
+						<div class="origin_icon no1"></div>
+					</div>
+				</div>
+				<div class="item_box no12">
+					<div class="am_item off">
+						<img class="item_icon" src="assets/images/index/twelve_box_item_icon_3.svg" alt="">
+						<h3 class="text subtitle_03 tc_p4_400 tal">Nov 12 – Nov 15</h3>
+						<h4 class="narrate text body_03 tc_n1_50 tal">Taiwan Excellence Pavilion at the World Congress of Internal Medicine</h4>
+					</div>
+					<div class="item_origin">
+						<div class="origin_icon no2 off"></div>
+						<div class="origin_icon no1"></div>
+					</div>
+				</div>
+				<div class="item_box no13">
+					<div class="am_item off">
+						<img class="item_icon" src="assets/images/index/twelve_box_item_icon_1.svg" alt="">
+						<h3 class="text subtitle_03 tc_p3_400 tal">Nov 16 – Nov 19</h3>
+						<h4 class="narrate text body_03 tc_n1_50 tal">Taiwan Excellence Pavilion at MEDICA </h4>
+					</div>
+					<div class="item_origin">
+						<div class="origin_icon no2 off"></div>
+						<div class="origin_icon no1"></div>
+					</div>
+				</div>
+				<div class="item_box no7">
+					<div class="am_item off">
+						<img class="item_icon" src="assets/images/index/twelve_box_item_icon_3.svg" alt="">
+						<h3 class="text subtitle_03 tc_p4_400 tal">Sep 9 – Sep 11</h3>
+						<h4 class="narrate text body_03 tc_n1_50 tal">Taiwan Excellence Pavilion at Medical Fair Asia</h4>
+					</div>
+					<div class="item_origin">
+						<div class="origin_icon no2 off"></div>
+						<div class="origin_icon no1"></div>
+					</div>
+				</div>
+				<div class="item_box no8">
+					<div class="am_item off">
+						<img class="item_icon" src="assets/images/index/twelve_box_item_icon_1.svg" alt="">
+						<h3 class="text subtitle_03 tc_p3_400 tal">Sep 8 – Sep 10</h3>
+						<h4 class="narrate text body_03 tc_n1_50 tal">Taiwan Excellence Pavilion at FIBO Arabia</h4>
+					</div>
+					<div class="item_origin">
+						<div class="origin_icon no2 off"></div>
+						<div class="origin_icon no1"></div>
+					</div>
+				</div>
+				<div class="item_box no9">
+					<div class="am_item off">
+						<img class="item_icon" src="assets/images/index/twelve_box_item_icon_1.svg" alt="">
+						<h3 class="text subtitle_03 tc_p3_400 tal">Sep 17 – Sep 19</h3>
+						<h4 class="narrate text body_03 tc_n1_50 tal">Taiwan Excellence Pavilion at Taiwan Expo in the Philippines</h4>
+					</div>
+					<div class="item_origin">
+						<div class="origin_icon no2 off"></div>
+						<div class="origin_icon no1"></div>
+					</div>
+				</div>
+			</div>
+			<div class="bg_map">
+				<div class="icon_box">
+					<div class="img_text_box">
+						<img src="assets/images/index/twelve_box_item_icon_1.svg" alt="">
+						<h5 class="text body_01 fw700 tc_n1_900 tal">Bicycle</h5>
+					</div>
+					<div class="img_text_box">
+						<img src="assets/images/index/twelve_box_item_icon_2.svg" alt="">
+						<h5 class="text body_01 fw700 tc_n1_900 tal">Sport</h5>
+					</div>
+					<div class="img_text_box">
+						<img src="assets/images/index/twelve_box_item_icon_3.svg" alt="">
+						<h5 class="text body_01 fw700 tc_n1_900 tal">Medical</h5>
+					</div>
+					<div class="img_text_box">
+						<img src="assets/images/index/twelve_box_item_icon_4.svg" alt="">
+						<h5 class="text body_01 fw700 tc_n1_900 tal">Taiwan Image</h5>
+					</div>
+				</div>
+			</div>
+			<div class="text_box">
+				<div class="title_box">
+					<h1 class="title_text text title_03 tc_p1 fw700">2026 Taiwan Excellence Exhibition Schedule</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+</section> --><!-- /twelve_box -->
+
+<!-- thirteen_box -->
+<section class="thirteen_box content_box bg_n2 wow" data-wow-duration="0s" data-wow-delay="0s">
+	<div class="content_rwd">
+		<div class="title_box"><h1 class="title_text text title_03 tc_p1_700 fw700 tac">Our Partners</h1></div>
+		<div class="logo_box">
+			<div class="logo_item">
+				<a class="item" href="https://en.tba-cycling.org" target="_blank"><img src="assets/images/index/thirteen_box_logo_1.png" alt=""></a>
+				<a class="item" href="https://aspn-sportstech.iaps.ord.nycu.edu.tw/lets-boost-en" target="_blank"><img src="assets/images/index/thirteen_box_logo_2.png" alt=""></a>
+				<a class="item" href="https://www.chi.sg/chi-innovate-2025" target="_blank"><img src="assets/images/index/thirteen_box_logo_3.png" alt=""></a>
+				<a class="item" href="https://news.gbimonthly.com/tw/article/index.php?kind=48" target="_blank"><img src="assets/images/index/thirteen_box_logo_4.png" alt=""></a>
+				<a class="item" href="https://www.itri.org.tw/english/index.aspx" target="_blank"><img src="assets/images/index/thirteen_box_logo_5.png" alt=""></a>
+				<a class="item" href="https://www.tmbia.org.tw/index.php" target="_blank"><img src="assets/images/index/thirteen_box_logo_6.png" alt=""></a>
+				<a class="item" href="http://www.sports.org.tw/e" target="_blank"><img src="assets/images/index/thirteen_box_logo_7.png" alt=""></a>
+				<a class="item" href="https://en.tbnet.org.tw" target="_blank"><img src="assets/images/index/thirteen_box_logo_8.png" alt=""></a>
+				<a class="item" href="#"><img src="assets/images/index/thirteen_box_logo_9.png" alt=""></a>
+				<a class="item" href="https://english.cw.com.tw/?pk_vid=72694ee30bcf95aa1746600291454d16" target="_blank"><img src="assets/images/index/thirteen_box_logo_10.png" alt=""></a>
+				<a class="item" href="https://www.taiwantrade.com/home.html" target="_blank"><img src="assets/images/index/thirteen_box_logo_11.png" alt=""></a>
+				<a class="item" href="https://en.ntnu.edu.tw" target="_blank"><img src="assets/images/index/thirteen_box_logo_12.png" alt=""></a>
+				<a class="item" href="https://cyclingmuseum.com.tw/en" target="_blank"><img src="assets/images/index/thirteen_box_logo_13.png" alt=""></a>
+				<a class="item" href="https://taidha.org" target="_blank"><img src="assets/images/index/thirteen_box_logo_14.png" alt=""></a>
+			</div>
+		</div>
+	</div>
+</section><!-- /thirteen_box -->
+
+<!-- ajax footer -->
+<footer class="ajax_footer wow" data-wow-duration="0s" data-wow-delay="0s"></footer>
+<!-- /ajax footer -->
+
+</body>
+
+</html>
