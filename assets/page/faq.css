@@ -1,0 +1,60 @@
+.item-tag{
+    padding: 20px;
+    border: solid 3px,#F6F6F6 ;
+    background-color: #F49D31;
+    color: #F6F6F6;
+    border-radius: 10000px;
+
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 120%;
+}
+
+
+.accordion-button {
+  display: flex;
+  align-items: center;
+  white-space: normal;
+  height: auto;
+  min-height: 3.5rem;
+}
+
+.accordion-button.collapsed {
+    background-color: #B9DEFE;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #B9DEFE;  
+    color: #000;              
+}
+
+.accordion-button:hover {
+    background-color: #7BC5FE;
+}
+
+.accordion-button::after {
+    background-image: none !important; 
+
+    content: "+";
+    font-size: 40px;
+    font-weight: 600;
+    color: #006ECB;
+
+    width: 50px;
+    height: 50px;
+
+    border: 3px solid #006ECB;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-left: auto;
+    padding-bottom: 4px;
+
+}
+
+.accordion-button:not(.collapsed)::after {
+    content: "-";
+}

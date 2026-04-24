@@ -76,7 +76,7 @@ p{font-size:1rem;line-height:1.25rem;}
 .text.body_02{font-size:1.25rem;line-height:1.85rem;}
 .text.body_03{font-size:1rem;line-height:1.5rem;}
 .text.body_04{font-size:0.75rem;line-height:0.85rem;}
-.text.{font-size:1rem;}
+.text{font-size:1rem;}
 
 .fwl{font-weight:lighter;}
 .fwn{font-weight:normal;}
@@ -928,7 +928,7 @@ animation:eight_box_am_bike 5s linear 0s 1 normal both;
 .ten_box .item.no1 .am_box.no3 .am{position:absolute;top:50%;left:45%;width:auto;height:300px;}
 .ten_box .item.no1 .am_box.no4 .am{position:absolute;top:90%;left:40%;width:auto;height:280px;}
 .ten_box .item.no1 .am_box .title{width:auto;padding:70px 40px;background-color:#F0F7FF;-webkit-border-radius:120px;-moz-border-radius:120px;border-radius:120px;}
-.ten_box .item.no1 .am_box.no2 .title{}
+/* .ten_box .item.no1 .am_box.no2 .title{} */
 .ten_box .item.no1 .am_box.no3 .title{padding-bottom:140px}
 .ten_box .item.no1 .am_box.no4 .title{padding-bottom:140px}
 .ten_box .item.no1 .am_box .st{margin:-120px 0 0 40px;}
