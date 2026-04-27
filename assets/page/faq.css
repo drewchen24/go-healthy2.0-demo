@@ -1,32 +1,93 @@
+.item-title{
+    background-color: #B9DEFE;
+    padding: 0 20px 20px 20px;
+}
 .item-tag{
+    width: 80px;
+    height: 80px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
     padding: 20px;
     border: solid 3px,#F6F6F6 ;
     background-color: #F49D31;
     color: #F6F6F6;
-    border-radius: 10000px;
+    border-radius: 50%;
 
     font-size: 28px;
     font-weight: 800;
-    line-height: 120%;
+    line-height: 1.2;
+    letter-spacing: -2%;
 }
 
+@media (max-width:768px) {
+    .item-tag{
+        width: 60px;
+        height: 60px;
+        padding: 16px;
+        flex-shrink:0;
+
+        font-size: 16px;
+}
+}
+
+.item-block {
+    display: block;
+}
+
+.item-none{
+    display: none;
+}
+
+@media  (max-width:768px) {
+     .item-sm-block {
+        display: block;
+    }   
+    .item-sm-none{
+    display: none;
+    }
+}
+.accordion{
+    gap: 48px;
+}
+.accordion-item {
+    border: none;
+    border-radius: 24px;
+    overflow: hidden;
+
+    margin-bottom: 32px;
+}
+@media (max-width:768px){
+    .accordion-item {
+        margin-bottom: 12px;
+}
+
+}
 
 .accordion-button {
   display: flex;
-  align-items: center;
+  align-items:center;
   white-space: normal;
   height: auto;
   min-height: 3.5rem;
+
+  color: #4F4F4F;
+  /* border-radius: 24px; */
 }
 
 .accordion-button.collapsed {
     background-color: #B9DEFE;
 }
 
+
+
 .accordion-button:not(.collapsed) {
     background-color: #B9DEFE;  
-    color: #000;              
-}
+    color: #4F4F4F;  
+    box-shadow:none ;
+    }
 
 .accordion-button:hover {
     background-color: #7BC5FE;
@@ -57,4 +118,31 @@
 
 .accordion-button:not(.collapsed)::after {
     content: "-";
+}
+
+@media (max-width:768px){
+    .accordion-button::after{
+        justify-content: top;
+        align-items: bottom;
+    }
+
+}
+
+.accordion-body {
+    color: #6D6D6D;
+    border: solid 3px #B9DEFE;
+    border-radius: 0 0 24px 24px;  
+    
+    font-size: 24px;
+    line-height: 140% ;
+    letter-spacing: -1%;
+
+}
+
+
+@media (max-width:768px){
+    .accordion-body {
+        font-size: 16px;
+
+    }
 }
