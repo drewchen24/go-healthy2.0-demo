@@ -1,3 +1,40 @@
+/* faq banner */
+.faq-bn{
+    max-height: 442px;
+
+    background-image:url("/assets/images/faq/2026GoHealthy-Banner_3.FAQs_Desktop.png ");
+    background-size:contain;
+    background-position:center;
+    background-repeat: no-repeat;
+
+    padding-top: 120px;
+    padding-bottom: 120px;
+    padding-left: 120px;
+
+
+}
+
+.faq-bn h2{
+    font-size: 86px;
+    font-weight: 1200px;
+    color: #F6F6F6;
+}
+@media (max-width:768px) {
+    .faq-bn{
+        width: 100%;
+        max-height: 800px;
+
+        background-image:url("/assets/images/faq/2026GoHealthy-Banner_3.FAQs_Mobile.png ");
+        padding-top: 40px;
+        padding-bottom: 120px;
+        padding-left: 40px;
+    }
+
+    .faq-bn h2{
+    font-size: 54px;
+}
+}
+
 .item-title{
     background-color: #B9DEFE;
     padding: 0 20px 20px 20px;
@@ -30,7 +67,7 @@
         flex-shrink:0;
 
         font-size: 16px;
-}
+    }
 }
 
 .item-block {
