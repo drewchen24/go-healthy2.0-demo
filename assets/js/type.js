@@ -89,46 +89,6 @@ $(document).ready(function(){
 	);
 
 
-	/* Tailwind CSS 滾動轉向：垂直轉水平轉垂直 */
-	let lastKnownScrollPosition = 0;
-	let deltaY = 0;
-
-	window.addEventListener("scroll", wheelHandler);
-        
-	document.querySelectorAll('.sticky-container').forEach(function(container) {
-		const stikyContainerHeight = (container.querySelector('main').offsetWidth + window.innerHeight);
-		container.setAttribute('style', 'height: ' + stikyContainerHeight + 'px');
-	});
-
-	function isElementInViewport(el) {
-		const rect = el.getBoundingClientRect();
-		return rect.top <= 0 && rect.bottom > document.documentElement.clientHeight;
-	}
-
-	function wheelHandler(event) {
-
-		deltaY = window.scrollY - lastKnownScrollPosition;
-		lastKnownScrollPosition = window.scrollY;
-
-		console.log('deltaY', deltaY);
-
-		const containerInViewPort = Array.from(document.querySelectorAll('.sticky-container')).filter(function(container) {
-			return isElementInViewport(container);
-		})[0];
-
-		if (!containerInViewPort) {
-			return;
-		}
-
-		var isPlaceHolderBelowTop = containerInViewPort.offsetTop < document.documentElement.scrollTop;
-		var isPlaceHolderBelowBottom = containerInViewPort.offsetTop + containerInViewPort.offsetHeight > document.documentElement.scrollTop;
-		let g_canScrollHorizontally = isPlaceHolderBelowTop && isPlaceHolderBelowBottom;
-
-		if (g_canScrollHorizontally) {
-			containerInViewPort.querySelector('main').scrollLeft += deltaY;
-		}
-	}
-
 
 	/* eleven_box 頁籤框架 */
 	$(".tag_box .tag").click(function(){
@@ -251,5 +211,86 @@ $(document).ready(function(){
 	); 
 
 
+/* 影片位置觸發自動播放 */
+const videos = document.querySelectorAll('.auto-play-video');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    const video = entry.target;
+
+    if (entry.isIntersecting) {
+      video.play();
+    } else {
+      video.pause();
+    }
+  });
+}, {
+  threshold: 0.5 // 至少50%進入畫面才播放
+});
+
+videos.forEach(video => {
+  observer.observe(video);
+});
+
+
+
+
 
 });
+
+
+/* 寬度判斷事件 */
+$(document).ready(str_menu);
+$(window).on("resize", str_menu);
+function str_menu() {
+
+	/* 大裝置 */
+	if ($(window).width() > 1300) {
+
+	/* Tailwind CSS 滾動轉向：垂直轉水平轉垂直 */
+	let lastKnownScrollPosition = 0;
+	let deltaY = 0;
+
+	window.addEventListener("scroll", wheelHandler);
+        
+	document.querySelectorAll('.sticky-container').forEach(function(container) {
+		const stikyContainerHeight = (container.querySelector('main').offsetWidth + window.innerHeight);
+		container.setAttribute('style', 'height: ' + stikyContainerHeight + 'px');
+	});
+
+	function isElementInViewport(el) {
+		const rect = el.getBoundingClientRect();
+		return rect.top <= 0 && rect.bottom > document.documentElement.clientHeight;
+	}
+
+	function wheelHandler(event) {
+
+		deltaY = window.scrollY - lastKnownScrollPosition;
+		lastKnownScrollPosition = window.scrollY;
+
+		console.log('deltaY', deltaY);
+
+		const containerInViewPort = Array.from(document.querySelectorAll('.sticky-container')).filter(function(container) {
+			return isElementInViewport(container);
+		})[0];
+
+		if (!containerInViewPort) {
+			return;
+		}
+
+		var isPlaceHolderBelowTop = containerInViewPort.offsetTop < document.documentElement.scrollTop;
+		var isPlaceHolderBelowBottom = containerInViewPort.offsetTop + containerInViewPort.offsetHeight > document.documentElement.scrollTop;
+		let g_canScrollHorizontally = isPlaceHolderBelowTop && isPlaceHolderBelowBottom;
+
+		if (g_canScrollHorizontally) {
+			containerInViewPort.querySelector('main').scrollLeft += deltaY;
+		}
+	}
+
+		return false;
+
+	}
+
+
+}
+
